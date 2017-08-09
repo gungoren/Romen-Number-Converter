@@ -4,6 +4,10 @@ public class RomenNumberConverter
 {
     public String convert(int number)
     {
+        if (number >= 50 ) {
+            return appendAdditive(number, 50,  "L", "I");
+        }
+
         if (number >= 10 ) {
             return appendAdditive(number, 10,  "X", "I");
         }

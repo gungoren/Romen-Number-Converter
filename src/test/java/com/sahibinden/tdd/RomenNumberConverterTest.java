@@ -41,4 +41,13 @@ public class RomenNumberConverterTest
         assertEquals(converter.convert(12), "XII");
         assertEquals(converter.convert(13), "XIII");
     }
+
+    @Test
+    public void test_50_51_52_53() throws Exception
+    {
+        assertEquals(converter.convert(50), "L");
+        assertEquals(converter.convert(51), "LI");
+        assertEquals(converter.convert(52), "LII");
+        assertEquals(converter.convert(53), "LIII");
+    }
 }
