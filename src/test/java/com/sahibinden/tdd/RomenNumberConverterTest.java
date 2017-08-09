@@ -50,4 +50,27 @@ public class RomenNumberConverterTest
         assertEquals(converter.convert(52), "LII");
         assertEquals(converter.convert(53), "LIII");
     }
+
+    @Test
+    public void test_100_1_2_3() throws Exception
+    {
+        int start = 100;
+        assertEquals(converter.convert(start++), "C");
+        assertEquals(converter.convert(start++), "CI");
+        assertEquals(converter.convert(start++), "CII");
+        assertEquals(converter.convert(start++), "CIII");
+
+        start = 500;
+        assertEquals(converter.convert(start++), "D");
+        assertEquals(converter.convert(start++), "DI");
+        assertEquals(converter.convert(start++), "DII");
+        assertEquals(converter.convert(start++), "DIII");
+
+        start = 1000;
+        assertEquals(converter.convert(start++), "M");
+        assertEquals(converter.convert(start++), "MI");
+        assertEquals(converter.convert(start++), "MII");
+        assertEquals(converter.convert(start++), "MIII");
+
+    }
 }
