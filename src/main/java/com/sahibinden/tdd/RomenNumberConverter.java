@@ -5,31 +5,26 @@ public class RomenNumberConverter
     public String convert(int number)
     {
         if (number >= 10 ) {
-            StringBuilder sb = new StringBuilder("X");
-            for(int i = 10; i < number; i++)
-            {
-                sb.append("I");
-            }
-            return sb.toString();
+            return appendAdditive(number, 10,  "X", "I");
         }
 
         if (number >= 5 ) {
-            StringBuilder sb = new StringBuilder("V");
-            for(int i = 5; i < number; i++)
-            {
-                sb.append("I");
-            }
-            return sb.toString();
+            return appendAdditive(number, 5, "V", "I");
         }
 
-        if (number > 1) {
-            StringBuilder sb = new StringBuilder();
-            for(int i = 0; i < number; i++)
-            {
-                sb.append("I");
-            }
-            return sb.toString();
+        if (number >= 1) {
+            return appendAdditive(number, 0, "", "I");
         }
-        return "I";
+        return "";
+    }
+
+    private String appendAdditive(int number, int start, String prefix, String suffix)
+    {
+        StringBuilder sb = new StringBuilder(prefix);
+        for(int i = start; i < number; i++)
+        {
+            sb.append(suffix);
+        }
+        return sb.toString();
     }
 }
