@@ -23,4 +23,22 @@ public class RomenNumberConverterTest
         assertEquals(converter.convert(2), "II");
         assertEquals(converter.convert(3), "III");
     }
+
+    @Test
+    public void test_5_6_7_8() throws Exception
+    {
+        assertEquals(converter.convert(5), "V");
+        assertEquals(converter.convert(6), "VI");
+        assertEquals(converter.convert(7), "VII");
+        assertEquals(converter.convert(8), "VIII");
+    }
+
+    @Test
+    public void test_10_11_12_13() throws Exception
+    {
+        assertEquals(converter.convert(10), "X");
+        assertEquals(converter.convert(11), "XI");
+        assertEquals(converter.convert(12), "XII");
+        assertEquals(converter.convert(13), "XIII");
+    }
 }
