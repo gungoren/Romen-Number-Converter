@@ -56,8 +56,6 @@ public class RomenNumberConverter
             Integer chipper = chipperMap.get(key);
             if (key == number + chipper) {
                 return appendPrefix(value, romenMap.get(chipper));
-            }else if (key == number - chipper) {
-                return appendSuffix(number, key, value, chipper,  romenMap.get(chipper));
             }else if (number % key == 0) {
                 return appendSuffix(number, key, value, key, romenMap.get(key));
             }else if (number > key) {
