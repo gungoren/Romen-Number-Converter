@@ -1,8 +1,6 @@
-package com.sahibinden.tdd;
+package com.gungoren.tdd;
 
-import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -44,6 +42,22 @@ public class RomenNumberConverterTest
     }
 
     @Test
+    public void test_10_20_30() throws Exception
+    {
+        assertEquals(converter.convert(10), "X");
+        assertEquals(converter.convert(20), "XX");
+        assertEquals(converter.convert(30), "XXX");
+    }
+
+    @Test
+    public void test_100_200_300() throws Exception
+    {
+        assertEquals(converter.convert(100), "C");
+        assertEquals(converter.convert(200), "CC");
+        assertEquals(converter.convert(300), "CCC");
+    }
+
+    @Test
     public void test_4() throws Exception
     {
         assertEquals(converter.convert(4), "IV");
@@ -65,10 +79,9 @@ public class RomenNumberConverterTest
     }
 
     @Test
-    @Ignore
     public void test_49() throws Exception
     {
-        assertEquals(converter.convert(49), "XLI");
+        assertEquals(converter.convert(49), "XLIX");
     }
 
     @Test
@@ -98,18 +111,17 @@ public class RomenNumberConverterTest
         assertEquals(converter.convert(start++), "CI");
         assertEquals(converter.convert(start++), "CII");
         assertEquals(converter.convert(start++), "CIII");
+    }
 
-        /*start = 500;
-        assertEquals(converter.convert(start++), "D");
-        assertEquals(converter.convert(start++), "DI");
-        assertEquals(converter.convert(start++), "DII");
-        assertEquals(converter.convert(start++), "DIII");
+    @Test
+    public void test_1975() throws Exception
+    {
+        assertEquals(converter.convert(1975), "MCMLXXV");
+    }
 
-        start = 1000;
-        assertEquals(converter.convert(start++), "M");
-        assertEquals(converter.convert(start++), "MI");
-        assertEquals(converter.convert(start++), "MII");
-        assertEquals(converter.convert(start++), "MIII");
-        */
+    @Test
+    public void test_3999() throws Exception
+    {
+        assertEquals(converter.convert(3999), "MMMCMXCIX");
     }
 }
