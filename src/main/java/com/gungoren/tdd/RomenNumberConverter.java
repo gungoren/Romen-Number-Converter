@@ -34,6 +34,9 @@ public class RomenNumberConverter
 
     public String convert(int number)
     {
+
+        if (number < 1 || number > 3999)
+            throw new RomenNumberException("number is out of range, valid range [1, 3999]");
         List<Integer> digits = digitParser.parse(number);
         StringBuilder sb = new StringBuilder();
         for(Integer digit: digits)

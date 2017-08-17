@@ -124,4 +124,16 @@ public class RomenNumberConverterTest
     {
         assertEquals(converter.convert(3999), "MMMCMXCIX");
     }
+
+    @Test(expected = RomenNumberException.class)
+    public void test_0() throws Exception
+    {
+        assertEquals(converter.convert(0), "");
+    }
+
+    @Test(expected = RomenNumberException.class)
+    public void test_4000() throws Exception
+    {
+        assertEquals(converter.convert(4000), "");
+    }
 }
