@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class RomenNumberConverter
+public class Number2RomenNumberConverter
 {
     private final static HashMap<Integer, String> romenMap;
     private final static HashMap<Integer, Integer> chipperMap;
@@ -34,7 +34,6 @@ public class RomenNumberConverter
 
     public String convert(int number)
     {
-
         if (number < 1 || number > 3999)
             throw new RomenNumberException("number is out of range, valid range [1, 3999]");
         List<Integer> digits = digitParser.parse(number);

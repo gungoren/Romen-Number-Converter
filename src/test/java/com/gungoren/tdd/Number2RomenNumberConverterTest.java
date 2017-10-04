@@ -5,14 +5,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class RomenNumberConverterTest
+public class Number2RomenNumberConverterTest
 {
-    private RomenNumberConverter converter;
+    private Number2RomenNumberConverter converter;
 
     @Before
     public void setUp() throws Exception
     {
-        converter = new RomenNumberConverter();
+        converter = new Number2RomenNumberConverter();
     }
 
     @Test
