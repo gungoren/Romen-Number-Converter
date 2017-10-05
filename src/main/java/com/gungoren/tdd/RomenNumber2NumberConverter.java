@@ -51,7 +51,7 @@ public class RomenNumber2NumberConverter
             if (chipper.equals(previous))
             {
                 number -= 2 * previousValue;
-            } else if (value > previousValue)
+            } else if (previousValue != 0 && value > previousValue)
             {
                 throw new RomenNumberException("invalid romen number");
             }
